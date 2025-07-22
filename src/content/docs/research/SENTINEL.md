@@ -49,28 +49,28 @@ template: splash
 - 🧠 **Early intervention halts hallucination propagation**. We find that hallucinations of MLLMs predominantly arise in early sentences and propagate through the rest of the output. SENTINEL interrupts this chain early to maximize mitigation.
 <table align="center">
     <p align="center">
-      <img src="/src/assets/research/SENTINEL/figure2.png" width="80%" />
+      <img src="/assets/research/SENTINEL/figure2.png" width="80%" />
     </p>
 </table>
 
 - 🔍 **In-domain contextual preference learning without human labels**. SENTINEL constructs hallucinated/factual samples via detector cross-validation and builds context-aware preference data without relying on proprietary LLMs or manual annotations.
 <table align="center">
     <p align="center">
-      <img src="/src/assets/research/SENTINEL/figure3.png" width="80%" />
+      <img src="/assets/research/SENTINEL/figure3.png" width="80%" />
     </p>
 </table>
 
 - 💡 **Context matters: rich coherence drives robustness**. By prioritizing context-coherent positive samples over hallucinated ones, SENTINEL significantly boosts generalization.
 <table align="center">
     <p align="center">
-      <img src="/src/assets/research/SENTINEL/figure4.png" width="80%" />
+      <img src="/assets/research/SENTINEL/figure4.png" width="80%" />
     </p>
 </table>
 
 - ♻️ **Iterative contextual bootstrapping for diverse hallucination-free contexts**. Our pipeline dynamically grows non-hallucinated contexts and expands coverage across varied scenes, improving robustness across generations.
 <table align="center">
     <p align="center">
-      <img src="/src/assets/research/SENTINEL/figure5.png" width="80%" />
+      <img src="/assets/research/SENTINEL/figure5.png" width="80%" />
     </p>
 </table>
 
@@ -78,7 +78,7 @@ template: splash
 SENTINEL achieves **up to 92% reduction** in hallucinations and outperforms prior SOTA methods across Object HalBench, AMBER, and HallusionBench, while maintaining or improving general task performance.
 <table align="center">
     <p align="center">
-      <img src="/src/assets/research/SENTINEL/table1.png" width="80%" />
+      <img src="/assets/research/SENTINEL/table1.png" width="80%" />
     </p>
 </table>
 

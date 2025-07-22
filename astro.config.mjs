@@ -15,7 +15,7 @@ export default defineConfig({
       description: "psp_dada's personal homepage",
       // 网站图标
       logo: {
-        src: "./src/assets/avatar.jpg",
+        src: "./public/assets/avatar.jpg",
       },
       // 为此网站设置英语为默认语言。
       defaultLocale: "root",
