@@ -4,7 +4,7 @@ import starlight from "@astrojs/starlight";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://pspdada.github.io',
+  site: "https://pspdada.github.io",
   integrations: [
     starlight({
       title: {
@@ -18,11 +18,12 @@ export default defineConfig({
         src: "./src/assets/avatar.jpg",
       },
       // 为此网站设置英语为默认语言。
-      defaultLocale: "en",
+      defaultLocale: "root",
       locales: {
         // 英文文档在 `src/content/docs/en/` 中。
-        en: {
+        root: {
           label: "English",
+          lang: "en",
         },
         // 简体中文文档在 `src/content/docs/zh-cn/` 中。
         "zh-cn": {
