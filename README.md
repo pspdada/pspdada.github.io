@@ -1,4 +1,32 @@
-# psp_dada's personal pages
+# psp_dada's personal pages <!-- omit in toc -->
+
+This file provides the related information about the project, including the project structure, commands, and links to deploy or run the project.
+
+# Contents <!-- omit in toc -->
+- [Pre-commit](#pre-commit)
+- [Starlight Starter Kit: Basics](#starlight-starter-kit-basics)
+  - [🚀 Project Structure](#-project-structure)
+  - [🧞 Commands](#-commands)
+  - [👀 Want to learn more?](#-want-to-learn-more)
+
+## Pre-commit
+This project uses [pre-commit](https://pre-commit.com/) to run checks before committing code. To set it up, run:
+
+```bash
+# 1. Install pre-commit
+pip install pre-commit
+pre-commit --version
+
+# 2. Add a pre-commit configuration
+# create a file named .pre-commit-config.yaml
+pre-commit sample-config
+
+# 3. Install the git hook scripts
+pre-commit install
+
+# 4. Run against all the files
+pre-commit run --all-files
+```
 
 ## Starlight Starter Kit: Basics
 
@@ -7,11 +35,6 @@
 ```
 npm create astro@latest -- --template starlight
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/withastro/starlight&create_from_path=examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
 
 ### 🚀 Project Structure
 
