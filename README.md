@@ -3,13 +3,16 @@
 This file provides the related information about the project, including the project structure, commands, and links to deploy or run the project.
 
 # Contents <!-- omit in toc -->
+
 - [Pre-commit](#pre-commit)
+- [Prettier](#prettier)
 - [Starlight Starter Kit: Basics](#starlight-starter-kit-basics)
   - [🚀 Project Structure](#-project-structure)
   - [🧞 Commands](#-commands)
   - [👀 Want to learn more?](#-want-to-learn-more)
 
 ## Pre-commit
+
 This project uses [pre-commit](https://pre-commit.com/) to run checks before committing code. To set it up, run:
 
 ```bash
@@ -26,6 +29,29 @@ pre-commit install
 
 # 4. Run against all the files
 pre-commit run --all-files
+```
+
+## Prettier
+
+This project uses [Prettier](https://prettier.io/) for code formatting. To set it up, run:
+
+```bash
+# 1. Install Prettier
+npm install --save-dev --save-exact prettier
+
+# 2. Create a configuration file
+node --eval "fs.writeFileSync('.prettierrc','{}\n')"
+node --eval "fs.writeFileSync('.prettierignore','# Ignore artifacts:\nbuild\ncoverage\n')"
+
+# 3. Add a format script
+echo '{
+  "scripts": {
+    "format": "prettier --write ."
+  }
+}' > package.json
+
+# 4. Run Prettier
+npx prettier . --write
 ```
 
 ## Starlight Starter Kit: Basics

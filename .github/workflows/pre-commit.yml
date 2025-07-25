@@ -1,5 +1,10 @@
 name: pre-commit
 
+# 使用方式：
+# 手动在本地运行 pre-commit
+# pre-commit run --all-files
+# 远程 CI 运行只会检查，不会修改代码
+
 on:
   pull_request:
   push:

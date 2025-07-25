@@ -19,12 +19,12 @@ template: splash
 <img src='https://img.shields.io/badge/LICENSE-Apache_2.0-yellow'></a>
 </div>
 
-**[Shangpin Peng](https://scholar.google.com/citations?user=mKnBrRAAAAAJ&hl=zh-CN) \* <sup>1</sup>**, **[Senqiao Yang](https://scholar.google.com/citations?user=NcJc-RwAAAAJ) \* <sup>2</sup>**, **[Li Jiang](https://scholar.google.com/citations?user=5cIodxsAAAAJ) <sup>3</sup>**, **[Zhuotao Tian](https://scholar.google.com/citations?user=mEjhz-IAAAAJ&hl=zh-CN) <sup>1</sup>**<sup>✉️</sup>  
-<sup>1</sup>Harbin Institute of Technology, Shenzhen  
-<sup>2</sup>The Chinese University of Hong Kong  
+**[Shangpin Peng](https://scholar.google.com/citations?user=mKnBrRAAAAAJ&hl=zh-CN) \* <sup>1</sup>**, **[Senqiao Yang](https://scholar.google.com/citations?user=NcJc-RwAAAAJ) \* <sup>2</sup>**, **[Li Jiang](https://scholar.google.com/citations?user=5cIodxsAAAAJ) <sup>3</sup>**, **[Zhuotao Tian](https://scholar.google.com/citations?user=mEjhz-IAAAAJ&hl=zh-CN) <sup>1</sup>**<sup>✉️</sup>
+<sup>1</sup>Harbin Institute of Technology, Shenzhen
+<sup>2</sup>The Chinese University of Hong Kong
 <sup>3</sup>The Chinese University of Hong Kong, Shenzhen
 
-\* Equal contribution.  
+\* Equal contribution.
 <sup>✉️</sup> Corresponding author: tianzhuotao@hit.edu.cn.
 
 </div>
@@ -72,14 +72,13 @@ template: splash
     </p>
 </table>
 
-- 📊 **各基准测试中达到优秀水平**。  
+- 📊 **各基准测试中达到优秀水平**。
 SENTINEL 在减少幻觉方面最多可达 **92%** 的降低，并在 Object HalBench、AMBER 和 HallusionBench 上超越先前 SOTA 方法，同时保持或提升通用任务性能。
 <table align="center">
     <p align="center">
       <img src="/assets/research/SENTINEL/table1.png" width="80%" />
     </p>
 </table>
-
 
 ## 📝 引用
 
