@@ -19,12 +19,16 @@ template: splash
 <img src='https://img.shields.io/badge/LICENSE-Apache_2.0-yellow'></a>
 </div>
 
-**[Shangpin Peng](https://scholar.google.com/citations?user=mKnBrRAAAAAJ&hl=zh-CN) \* <sup>1</sup>**, **[Senqiao Yang](https://scholar.google.com/citations?user=NcJc-RwAAAAJ) \* <sup>2</sup>**, **[Li Jiang](https://scholar.google.com/citations?user=5cIodxsAAAAJ) <sup>3</sup>**, **[Zhuotao Tian](https://scholar.google.com/citations?user=mEjhz-IAAAAJ&hl=zh-CN) <sup>1</sup>**<sup>✉️</sup>
-<sup>1</sup>Harbin Institute of Technology, Shenzhen
-<sup>2</sup>The Chinese University of Hong Kong
+**[Shangpin Peng](https://scholar.google.com/citations?user=mKnBrRAAAAAJ&hl=zh-CN)\*<sup>1</sup>**,&emsp;
+**[Senqiao Yang](https://scholar.google.com/citations?user=NcJc-RwAAAAJ)\*<sup>2</sup>**,&emsp;
+**[Li Jiang](https://scholar.google.com/citations?user=5cIodxsAAAAJ)<sup>3</sup>**,&emsp;
+**[Zhuotao Tian](https://scholar.google.com/citations?user=mEjhz-IAAAAJ&hl=zh-CN)<sup>1</sup>**<sup>✉️</sup>
+
+<sup>1</sup>Harbin Institute of Technology, Shenzhen<br>
+<sup>2</sup>The Chinese University of Hong Kong<br>
 <sup>3</sup>The Chinese University of Hong Kong, Shenzhen
 
-\* Equal contribution.
+\* Equal contribution.<br>
 <sup>✉️</sup> Corresponding author: tianzhuotao@hit.edu.cn.
 
 </div>
