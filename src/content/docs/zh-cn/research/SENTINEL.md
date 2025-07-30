@@ -28,14 +28,15 @@ template: splash
 <sup>2</sup>The Chinese University of Hong Kong<br>
 <sup>3</sup>The Chinese University of Hong Kong, Shenzhen
 
-\* Equal contribution.<br>
-<sup>✉️</sup> Corresponding author: tianzhuotao@hit.edu.cn.
+\* Equal contribution<br>
+<sup>✉️</sup> Corresponding author: tianzhuotao@hit.edu.cn
 
 </div>
 
 ## 🎊 新闻 <!-- omit in toc -->
 
-- [2025.07.21] 所有代码、数据和模型已发布！
+- [2025.07.30] 🔍 我们的工作被 52CV 解读，查看详情[这里](https://mp.weixin.qq.com/s/Sfr1wdUCkeOLmj7NVWNUnw)。
+- [2025.07.21] 📖 所有代码、数据和模型已发布！
 - [2025.06.26] 🎉 我们的 SENTINEL 被 **ICCV 2025** 接收！
 
 ## 🚀 概览 <!-- omit in toc -->
@@ -48,35 +49,35 @@ template: splash
 
 ## 🔑 主要特性
 
-- 🧠 **早期干预阻断幻觉传播**。我们发现 MLLMs 的幻觉主要在前几句中产生，并在后续输出中不断传播。SENTINEL 提前打断该链条，以最大程度地缓解幻觉。
+- **早期干预阻断幻觉传播**。我们发现 MLLMs 的幻觉主要在前几句中产生，并在后续输出中不断传播。SENTINEL 提前打断该链条，以最大程度地缓解幻觉。
 <table align="center">
     <p align="center">
       <img src="/assets/research/SENTINEL/figure2.png" width="80%" />
     </p>
 </table>
 
-- 🔍 **无需人工标注的域内上下文偏好学习**。SENTINEL 通过检测器交叉验证构造*幻觉/真实*样本，并在不依赖专有 LLM 或手动标注的情况下构建域内偏好数据。
+- **无需人工标注的域内上下文偏好学习**。SENTINEL 通过检测器交叉验证构造*幻觉/真实*样本，并在不依赖专有 LLM 或手动标注的情况下构建域内偏好数据。
 <table align="center">
     <p align="center">
       <img src="/assets/research/SENTINEL/figure3.png" width="80%" />
     </p>
 </table>
 
-- 💡 **上下文至关重要：丰富的连贯性提升鲁棒性**。通过优先选择上下文连贯的正样本，SENTINEL 显著提升了泛化能力。
+- **上下文至关重要：丰富的连贯性提升鲁棒性**。通过优先选择上下文连贯的正样本，SENTINEL 显著提升了泛化能力。
 <table align="center">
     <p align="center">
       <img src="/assets/research/SENTINEL/figure4.png" width="80%" />
     </p>
 </table>
 
-- ♻️ **迭代式上下文自举，生成多样无幻觉上下文**。我们的框架动态地扩展非幻觉上下文，覆盖更多场景，提升模型在推理阶段的鲁棒性。
+- **迭代式上下文自举，生成多样无幻觉上下文**。我们的框架动态地扩展非幻觉上下文，覆盖更多场景，提升模型在推理阶段的鲁棒性。
 <table align="center">
     <p align="center">
       <img src="/assets/research/SENTINEL/figure5.png" width="80%" />
     </p>
 </table>
 
-- 📊 **各基准测试中达到优秀水平**。
+- **各基准测试中达到优秀水平**。
 SENTINEL 在减少幻觉方面最多可达 **92%** 的降低，并在 Object HalBench、AMBER 和 HallusionBench 上超越先前 SOTA 方法，同时保持或提升通用任务性能。
 <table align="center">
     <p align="center">
