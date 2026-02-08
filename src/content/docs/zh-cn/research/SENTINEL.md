@@ -7,16 +7,22 @@ template: splash
 <div align="center">
 
 <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;">
+
 <a href='https://arxiv.org/abs/2507.12455'>
-<img src='https://img.shields.io/badge/Paper-Arxiv-purple'></a>
+<img src='https://img.shields.io/badge/论文-Arxiv-purple'></a>
 <a href='https://huggingface.co/datasets/psp-dada/SENTINEL'>
-<img src='https://img.shields.io/badge/Datasets-HF-Green'></a>
+<img src='https://img.shields.io/badge/数据集-HF-Green'></a>
 <a href='https://huggingface.co/collections/psp-dada/sentinel-686ea70912079af142015286'>
-<img src='https://img.shields.io/badge/Models-HF-orange'></a>
+<img src='https://img.shields.io/badge/模型-HF-orange'></a>
 <a href='https://huggingface.co/papers/2507.12455'>
-<img src='https://img.shields.io/badge/Discussion-HF-blue'></a>
+<img src='https://img.shields.io/badge/讨论区-HF-blue'></a>
 <a href='https://github.com/pspdada/SENTINEL/blob/main/LICENSE'>
-<img src='https://img.shields.io/badge/LICENSE-Apache_2.0-yellow'></a>
+<img src='https://img.shields.io/badge/许可证-Apache_2.0-yellow'></a>
+<a href='https://modelscope.cn/datasets/pspdada/SENTINEL'>
+<img src='https://img.shields.io/badge/数据集-🤖ModelScope-pink'></a>
+<a href='https://modelscope.cn/collections/pspdada/SENTINEL'>
+<img src='https://img.shields.io/badge/模型-🤖ModelScope-red'></a>
+
 </div>
 
 **[Shangpin Peng](https://scholar.google.com/citations?user=mKnBrRAAAAAJ&hl=zh-CN)\*<sup>1</sup>**,&emsp;
@@ -90,10 +96,11 @@ SENTINEL 在减少幻觉方面最多可达 **92%** 的降低，并在 Object Hal
 如果我们的模型/代码/数据/论文对您有帮助，请引用我们的论文并为我们点 ⭐️！
 
 ```bibtex
-@article{peng2025mitigating,
-  title={Mitigating Object Hallucinations via Sentence-Level Early Intervention},
+@inproceedings{peng2025mitigating,
+  title={Mitigating object hallucinations via sentence-level early intervention},
   author={Peng, Shangpin and Yang, Senqiao and Jiang, Li and Tian, Zhuotao},
-  journal={arXiv preprint arXiv:2507.12455},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={635--646},
   year={2025}
 }
 ```

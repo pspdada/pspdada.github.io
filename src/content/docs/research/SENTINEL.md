@@ -7,6 +7,7 @@ template: splash
 <div align="center">
 
 <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;">
+
 <a href='https://arxiv.org/abs/2507.12455'>
 <img src='https://img.shields.io/badge/Paper-Arxiv-purple'></a>
 <a href='https://huggingface.co/datasets/psp-dada/SENTINEL'>
@@ -17,6 +18,11 @@ template: splash
 <img src='https://img.shields.io/badge/Discussion-HF-blue'></a>
 <a href='https://github.com/pspdada/SENTINEL/blob/main/LICENSE'>
 <img src='https://img.shields.io/badge/LICENSE-Apache_2.0-yellow'></a>
+<a href='https://modelscope.cn/datasets/pspdada/SENTINEL'>
+<img src='https://img.shields.io/badge/Datasets-🤖ModelScope-pink'></a>
+<a href='https://modelscope.cn/collections/pspdada/SENTINEL'>
+<img src='https://img.shields.io/badge/Models-🤖ModelScope-red'></a>
+
 </div>
 
 **[Shangpin Peng](https://scholar.google.com/citations?user=mKnBrRAAAAAJ&hl=zh-CN)\*<sup>1</sup>**,&emsp;
@@ -92,10 +98,11 @@ SENTINEL achieves **up to 92% reduction** in hallucinations and outperforms prio
 If you find our model/code/data/paper helpful, please consider citing our papers 📝 and starring us ⭐️！
 
 ```bibtex
-@article{peng2025mitigating,
-  title={Mitigating Object Hallucinations via Sentence-Level Early Intervention},
+@inproceedings{peng2025mitigating,
+  title={Mitigating object hallucinations via sentence-level early intervention},
   author={Peng, Shangpin and Yang, Senqiao and Jiang, Li and Tian, Zhuotao},
-  journal={arXiv preprint arXiv:2507.12455},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={635--646},
   year={2025}
 }
 ```
