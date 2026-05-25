@@ -3,26 +3,24 @@ title: Research
 description: Research pages
 ---
 
-import { LinkCard } from "@astrojs/starlight/components";
-import { Icon } from "@astrojs/starlight/components";
+import { Badge } from "@astrojs/starlight/components";
+import PaperList from "@components/PaperList.astro";
+import "@styles/research.css";
 
 ## 研究概述
 
-欢迎来到我的研究页面！在这里你可以了解我在人工智能、大型语言模型和自然语言处理领域的最新工作和兴趣。
+欢迎来到我的研究页面！在这里你可以了解我在多模态大语言模型、强化学习和智能体的最新工作和兴趣。
 
-### 研究方向
+<div class="research-badges">
+  <Badge text="强化学习" variant="tip" />
+  <Badge text="智能体" variant="note" />
+  <Badge text="视觉语言模型" variant="success" />
+  <Badge text="后训练" variant="caution" />
+</div>
 
-- 多模态大型语言模型幻觉检测与干预
-- 大型语言模型偏好学习算法
-- 多模态智能体及其应用
+### 近期发表
 
-### 最新发表
-
-<LinkCard
-  title="Mitigating Object Hallucinations via Sentence-Level Early Intervention"
-  href="/research/sentinel"
-  description="Shangpin Peng, Senqiao Yang, Li Jiang, Zhuotao Tian"
-/>
+<PaperList lang="zh" />
 
 ### 相关链接
 

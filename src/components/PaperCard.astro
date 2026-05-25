@@ -1,0 +1,183 @@
+---
+import type { Author } from "../data/publications";
+
+interface Props {
+  title: string;
+  authors: Author[];
+  venue?: string;
+  paper?: string;
+  code?: string;
+  href?: string;
+  // 站内详情页路径前缀（用于不同语言版本区分），默认空
+  hrefPrefix?: string;
+}
+
+const { title, authors, venue, paper, code, href, hrefPrefix = "" } = Astro.props;
+
+// 第三行 meta：venue / paper / code 自适应组合
+type MetaItem = { kind: "venue" | "link"; text: string; href?: string };
+const metaItems: MetaItem[] = [];
+if (venue) metaItems.push({ kind: "venue", text: venue });
+if (paper) metaItems.push({ kind: "link", text: "paper", href: paper });
+if (code) metaItems.push({ kind: "link", text: "code", href: code });
+
+const fullHref = href ? `${hrefPrefix}${href}` : undefined;
+---
+
+<div class="paper-card">
+  <span class="paper-stack">
+    {fullHref ? (
+      <a href={fullHref} class="paper-title paper-title-link">{title}</a>
+    ) : (
+      <span class="paper-title">{title}</span>
+    )}
+
+    <span class="paper-authors">
+      {authors.map((author, i) => (
+        <>
+          {author.highlight
+            ? <strong class="paper-author-highlight">{author.name}</strong>
+            : <span>{author.name}</span>
+          }
+          {i < authors.length - 1 && <span class="paper-sep">, </span>}
+        </>
+      ))}
+    </span>
+
+    {metaItems.length > 0 && (
+      <span class="paper-meta">
+        {metaItems.map((item, i) => (
+          <>
+            {i > 0 && <span class="paper-meta-dot" aria-hidden="true">•</span>}
+            {item.kind === "venue" ? (
+              <strong class="paper-meta-venue">{item.text}</strong>
+            ) : (
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="paper-meta-link"
+              >{item.text}</a>
+            )}
+          </>
+        ))}
+      </span>
+    )}
+  </span>
+
+  {fullHref && (
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.333em" height="1.333em" viewBox="0 0 24 24" class="paper-icon" aria-hidden="true">
+      <path fill="currentColor" d="M17.92 11.62a1 1 0 0 0-.21-.33l-5-5a1 1 0 0 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1 1 0 0 0 1.42 1.42l5-5a1 1 0 0 0 .21-.33a1 1 0 0 0 0-.76Z"/>
+    </svg>
+  )}
+</div>
+
+<style>
+  .paper-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: var(--sl-shadow-sm);
+    position: relative;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .paper-card:hover {
+    border-color: var(--sl-color-gray-2);
+  }
+
+  /* 仅在标题可点击时整卡 hover 变色 */
+  .paper-card:has(.paper-title-link):hover {
+    background: var(--sl-color-gray-7, var(--sl-color-gray-6));
+  }
+
+  .paper-card:hover .paper-icon {
+    color: var(--sl-color-white);
+  }
+
+  .paper-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 0;
+  }
+
+  .paper-title {
+    color: var(--sl-color-white);
+    font-weight: 600;
+    font-size: var(--sl-text-lg);
+    line-height: var(--sl-line-height-headings);
+    text-decoration: none;
+  }
+
+  /* 整卡可点击：覆盖伪元素只在 title 是链接时生效 */
+  .paper-title-link::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .paper-authors {
+    color: var(--sl-color-gray-3);
+    font-size: var(--sl-text-sm);
+    line-height: 1.5;
+  }
+
+  .paper-author-highlight {
+    color: var(--sl-color-white);
+    font-weight: 600;
+  }
+
+  .paper-sep {
+    color: var(--sl-color-gray-3);
+  }
+
+  .paper-venue {
+    color: var(--sl-color-white);
+    font-weight: 600;
+    font-size: var(--sl-text-sm);
+  }
+
+  .paper-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    font-size: var(--sl-text-sm);
+    line-height: 1.5;
+  }
+
+  .paper-meta-venue {
+    color: var(--sl-color-white);
+    font-weight: 600;
+  }
+
+  .paper-meta-dot {
+    color: var(--sl-color-gray-4);
+    user-select: none;
+  }
+
+  .paper-meta-link {
+    color: var(--sl-color-gray-3);
+    font-weight: 400;
+    text-decoration: none;
+    /* 提升到伪元素之上以可独立点击 */
+    position: relative;
+    z-index: 1;
+  }
+
+  .paper-meta-link:hover {
+    color: var(--sl-color-white);
+    text-decoration: underline;
+  }
+
+  .paper-icon {
+    color: var(--sl-color-gray-3);
+    align-self: center;
+  }
+</style>

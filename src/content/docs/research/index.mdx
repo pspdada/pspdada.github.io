@@ -3,26 +3,24 @@ title: Research
 description: Research pages
 ---
 
-import { LinkCard } from "@astrojs/starlight/components";
-import { Icon } from "@astrojs/starlight/components";
+import { Badge } from "@astrojs/starlight/components";
+import PaperList from "@components/PaperList.astro";
+import "@styles/research.css";
 
 ## Research Overview
 
-Welcome to my research page! Here you can find my latest work and interests in artificial intelligence, large language models, and natural language processing.
+Welcome to my research page! Here you can find my latest work and interests in multimodal large language models, reinforcement learning, and agents.
 
-### Research Interests
+<div class="research-badges">
+  <Badge text="Reinforcement Learning" variant="tip" />
+  <Badge text="Agent" variant="note" />
+  <Badge text="Vision-Language Models" variant="success" />
+  <Badge text="Post-Training" variant="caution" />
+</div>
 
-- Multimodal large language models hallucination detection and intervention
-- Preference learning algorithms for large language models
-- Multimodal agents and their applications
+### Recent Publications
 
-### Latest Publications
-
-<LinkCard
-  title="Mitigating Object Hallucinations via Sentence-Level Early Intervention"
-  href="/research/sentinel"
-  description="Shangpin Peng, Senqiao Yang, Li Jiang, Zhuotao Tian"
-/>
+<PaperList lang="en" />
 
 ### Useful Links
 

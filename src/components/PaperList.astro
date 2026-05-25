@@ -1,0 +1,89 @@
+---
+import { categories, publications } from "../data/publications";
+import PaperCard from "./PaperCard.astro";
+
+interface Props {
+  lang?: "en" | "zh";
+}
+
+const { lang = "en" } = Astro.props;
+
+// 站内详情页路径前缀（中文版加 /zh-cn 前缀）
+const hrefPrefix = lang === "zh" ? "/zh-cn" : "";
+
+// 按分类聚合
+const grouped = categories.map((cat) => ({
+  ...cat,
+  papers: publications.filter((p) => p.category === cat.key),
+}));
+---
+
+<div class="paper-list">
+  {grouped.map((group) => group.papers.length > 0 && (
+    <section class="paper-group">
+      <h3 class="paper-group-title">
+        <span class="paper-group-label">{group.label[lang]}</span>
+        <span class="paper-group-line" aria-hidden="true"></span>
+      </h3>
+      <div class="paper-group-items">
+        {group.papers.map((p) => (
+          <PaperCard
+            title={p.title}
+            authors={p.authors}
+            venue={p.venue}
+            paper={p.paper}
+            code={p.code}
+            href={p.href}
+            hrefPrefix={hrefPrefix}
+          />
+        ))}
+      </div>
+    </section>
+  ))}
+</div>
+
+<style>
+  .paper-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .paper-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  /* 醒目蓝色加粗的分类名称 + 同色浅色横线 */
+  .paper-group-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0;
+    /* 覆盖 starlight 默认 h3 间距 */
+    padding: 0;
+    border: none;
+  }
+
+  .paper-group-label {
+    color: var(--sl-color-accent, #3b82f6);
+    font-weight: 700;
+    font-size: var(--sl-text-h4);
+    white-space: nowrap;
+    flex: 0 0 auto;
+  }
+
+  .paper-group-line {
+    flex: 1 1 auto;
+    height: 2px;
+    border-radius: 2px;
+    background: color-mix(in srgb, var(--sl-color-accent, #3b82f6) 30%, transparent);
+  }
+
+  .paper-group-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+</style>

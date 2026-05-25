@@ -5,6 +5,13 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   site: "https://pspdada.github.io",
+  vite: {
+    resolve: {
+      alias: {
+        "@components": "/src/components",
+      },
+    },
+  },
   integrations: [
     starlight({
       title: {
@@ -45,48 +52,79 @@ export default defineConfig({
       ],
       sidebar: [
         {
-          label: "Guides",
-          translations: { "zh-CN": "目录" },
-          items: [
-            {
-              label: "Home",
-              link: "/",
-              translations: { "zh-CN": "主页" },
-            },
-            {
-              label: "Blog",
-              translations: { "zh-CN": "随笔" },
-              // 自动生成
-              autogenerate: { directory: "blog" },
-            },
-            {
-              label: "Project",
-              translations: { "zh-CN": "项目" },
-              // 自动生成
-              autogenerate: { directory: "project" },
-            },
-            {
-              label: "Research",
-              translations: { "zh-CN": "研究" },
-              // 自动生成
-              autogenerate: { directory: "research" },
-              // 手动设置
-              // items: [
-              //   {
-              //     label: "ICCV 2025 | SENTINEL",
-              //     link: "/research/sentinel",
-              //   },
-              // ],
-            },
-          ],
+          label: "Home",
+          link: "/",
+          translations: { "zh-CN": "主页" },
+        },
+        {
+          label: "Blog",
+          translations: { "zh-CN": "随笔" },
+          items: [{ autogenerate: { directory: "blog" } }],
+        },
+        {
+          label: "Project",
+          translations: { "zh-CN": "项目" },
+          items: [{ autogenerate: { directory: "project" } }],
+        },
+        {
+          label: "Research",
+          translations: { "zh-CN": "研究" },
+          items: [{ autogenerate: { directory: "research" } }],
+          // 手动设置示例：
+          // items: [
+          //   {
+          //     label: "ICCV 2025 | SENTINEL",
+          //     link: "/research/sentinel",
+          //   },
+          // ],
         },
       ],
       editLink: {
         baseUrl: "https://github.com/pspdada/pspdada.github.io/edit/main/",
       },
+      customCss: ["./src/styles/custom.css"],
       components: {
         Footer: "./src/components/Footer.astro",
       },
+      head: [
+        {
+          tag: "script",
+          content: `
+(function () {
+  function createToggleBtn() {
+    if (document.getElementById('sidebar-toggle-btn')) return;
+
+    // 仅在有侧边栏的页面创建按钮（检测 data-has-sidebar 属性）
+    if (!document.documentElement.hasAttribute('data-has-sidebar')) return;
+
+    var btn = document.createElement('button');
+    btn.id = 'sidebar-toggle-btn';
+    btn.setAttribute('aria-label', '折叠/展开侧边栏');
+    btn.innerHTML = '&#8249;';
+    document.body.appendChild(btn);
+
+    btn.addEventListener('click', function () {
+      var collapsed = document.body.classList.toggle('sidebar-collapsed');
+      btn.innerHTML = collapsed ? '&#8250;' : '&#8249;';
+      localStorage.setItem('sidebarCollapsed', collapsed ? '1' : '0');
+    });
+
+    // 恢复上次折叠状态
+    if (localStorage.getItem('sidebarCollapsed') === '1') {
+      document.body.classList.add('sidebar-collapsed');
+      btn.innerHTML = '&#8250;';
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', createToggleBtn);
+  } else {
+    createToggleBtn();
+  }
+})();
+          `,
+        },
+      ],
     }),
   ],
 });

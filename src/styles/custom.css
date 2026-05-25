@@ -1,0 +1,103 @@
+/* =============================================
+   调整正文宽度 & 右侧目录栏宽度
+   ============================================= */
+
+/* 右侧 TOC 栏变窄，正文区域自动变宽 */
+:root {
+  --sl-sidebar-width: 16rem;
+  --sl-content-width: 52rem;
+}
+
+/* =============================================
+   左侧边栏折叠按钮（仅桌面端 & 有侧边栏的页面）
+   ============================================= */
+
+#sidebar-toggle-btn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: var(--sl-sidebar-width);
+  z-index: 200;
+  width: 18px;
+  height: 48px;
+  background: var(--sl-color-bg-sidebar);
+  border: 1px solid var(--sl-color-hairline-shade);
+  border-left: none;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  display: none; /* 默认隐藏，JS 控制显示 */
+  align-items: center;
+  justify-content: center;
+  color: var(--sl-color-text-accent);
+  font-size: 14px;
+  line-height: 1;
+  padding: 0;
+  transition:
+    left 0.3s ease,
+    background 0.2s;
+}
+
+#sidebar-toggle-btn:hover {
+  background: var(--sl-color-bg-nav);
+}
+
+/* 桌面端（≥ 50rem）且有侧边栏时才显示 */
+@media (min-width: 50rem) {
+  [data-has-sidebar] #sidebar-toggle-btn {
+    display: flex;
+  }
+}
+
+/* =============================================
+   侧边栏折叠动画
+   ============================================= */
+
+/* 给侧边栏加过渡 */
+@media (min-width: 50rem) {
+  .sidebar-pane {
+    transition: width 0.3s ease;
+    overflow: hidden !important;
+  }
+
+  /* 折叠状态：宽度收为 0 */
+  body.sidebar-collapsed .sidebar-pane {
+    width: 0 !important;
+  }
+
+  /* 折叠时按钮移到最左侧 */
+  body.sidebar-collapsed #sidebar-toggle-btn {
+    left: 0;
+  }
+
+  /* 折叠时正文区域撑满（移除左侧 padding） */
+  body.sidebar-collapsed .main-frame {
+    padding-inline-start: 0 !important;
+    transition: padding-inline-start 0.3s ease;
+  }
+
+  .main-frame {
+    transition: padding-inline-start 0.3s ease;
+  }
+}
+
+/* 折叠状态：左侧边栏隐藏 */
+body.sidebar-collapsed .sidebar {
+  transform: translateX(-100%);
+  visibility: hidden;
+}
+
+body.sidebar-collapsed #sidebar-toggle-btn {
+  left: 0;
+}
+
+/* 左侧边栏过渡动画 */
+.sidebar {
+  transition:
+    transform 0.3s ease,
+    visibility 0.3s ease;
+}
+
+/* 折叠时正文区域撑满 */
+body.sidebar-collapsed .main-frame {
+  padding-inline-start: 0 !important;
+}
