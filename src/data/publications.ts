@@ -133,6 +133,20 @@ export const publications: Publication[] = [
 
   // ===== Agent =====
   {
+    title: "PhoneWorld: Scaling Phone-Use Agent Environments",
+    authors: [
+      { name: "Zhengyang Tang" },
+      { name: "et al." },
+      { name: "Shangpin Peng" }, // 不加粗
+      { name: "et al." },
+      { name: "Chengquan Zhang" },
+      { name: "Han Hu" },
+    ],
+    venue: "Arxiv 2026",
+    paper: "https://arxiv.org/abs/2605.29486",
+    category: "agent",
+  },
+  {
     title:
       "Safe, or Simply Incapable? Rethinking Safety Evaluation for Phone-Use Agents",
     authors: [
