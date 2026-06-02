@@ -131,6 +131,21 @@ export const publications: Publication[] = [
     category: "vlm",
   },
 
+  {
+    title:
+      "ChartArena: Benchmarking Chart Parsing across Languages, Scenarios, and Formats",
+    authors: [
+      { name: "Shangpin Peng", highlight: true },
+      { name: "Gengluo Li" },
+      { name: "Xingyu Wan" },
+      { name: "et al." },
+    ],
+    venue: "Arxiv 2026",
+    paper: "https://arxiv.org/abs/2606.01348",
+    code: "https://github.com/pspdada/ChartArena",
+    category: "vlm",
+  },
+
   // ===== Agent =====
   {
     title: "PhoneWorld: Scaling Phone-Use Agent Environments",
