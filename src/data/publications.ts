@@ -8,6 +8,7 @@
 // - paper: 论文外部链接（可选）
 // - code: 代码仓库外部链接（可选）
 // - href: 站内详情页链接（可选）。若提供则 title 可点击跳转详情页
+// - media: 媒体报道/公众号讲解链接（可选）
 // - category: 分类 key，对应 categories 中的定义
 
 export interface Author {
@@ -21,6 +22,7 @@ export interface Publication {
   venue?: string;
   paper?: string;
   code?: string;
+  media?: string;
   href?: string;
   category: string;
 }
@@ -33,15 +35,15 @@ export interface CategoryDef {
 // 分类顺序即页面展示顺序
 export const categories: CategoryDef[] = [
   {
-    key: "rl",
+    key: "RL",
     label: { en: "Reinforcement Learning", zh: "强化学习" },
   },
   {
-    key: "vlm",
+    key: "VLM",
     label: { en: "Vision-Language Models", zh: "视觉语言模型" },
   },
   {
-    key: "agent",
+    key: "Agent",
     label: { en: "Agent", zh: "智能体" },
   },
 ];
@@ -62,7 +64,7 @@ export const publications: Publication[] = [
     venue: "Arxiv 2026",
     paper: "https://arxiv.org/abs/2605.03677",
     code: "https://github.com/WenjinHou/Uni-OPD",
-    category: "rl",
+    category: "RL",
   },
   {
     title:
@@ -78,7 +80,7 @@ export const publications: Publication[] = [
     venue: "ICLR 2026",
     paper: "https://arxiv.org/abs/2506.10054",
     code: "https://github.com/pspdada/Uni-DPO",
-    category: "rl",
+    category: "RL",
   },
 
   // ===== VLM =====
@@ -96,7 +98,8 @@ export const publications: Publication[] = [
     venue: "Core Contributor of Technical Report",
     paper: "https://arxiv.org/abs/2511.19575",
     code: "https://github.com/Tencent-Hunyuan/HunyuanOCR",
-    category: "vlm",
+    media: "https://mp.weixin.qq.com/s/W5_-iOYa9MYr8CI9u1ppSg",
+    category: "VLM",
   },
   {
     title:
@@ -111,8 +114,9 @@ export const publications: Publication[] = [
     paper:
       "https://openaccess.thecvf.com/content/ICCV2025/papers/Peng_Mitigating_Object_Hallucinations_via_Sentence-Level_Early_Intervention_ICCV_2025_paper.pdf",
     code: "https://github.com/pspdada/SENTINEL",
+    media: "https://mp.weixin.qq.com/s/Sfr1wdUCkeOLmj7NVWNUnw",
     href: "/research/sentinel",
-    category: "vlm",
+    category: "VLM",
   },
   {
     title:
@@ -128,7 +132,8 @@ export const publications: Publication[] = [
     venue: "Arxiv 2026",
     paper: "https://arxiv.org/abs/2605.11960",
     code: "https://github.com/VirtualLUOUCAS/Chronicles-OCR",
-    category: "vlm",
+    media: "https://mp.weixin.qq.com/s/RmzRuZcmYCDIhp_VI2G5Ig",
+    category: "VLM",
   },
 
   {
@@ -143,9 +148,8 @@ export const publications: Publication[] = [
     venue: "Arxiv 2026",
     paper: "https://arxiv.org/abs/2606.01348",
     code: "https://github.com/pspdada/ChartArena",
-    category: "vlm",
+    category: "VLM",
   },
-
   // ===== Agent =====
   {
     title: "PhoneWorld: Scaling Phone-Use Agent Environments",
@@ -159,7 +163,25 @@ export const publications: Publication[] = [
     ],
     venue: "Arxiv 2026",
     paper: "https://arxiv.org/abs/2605.29486",
-    category: "agent",
+    media: "https://mp.weixin.qq.com/s/uzasS6q6LAwX8wLXD7KzeA",
+    category: "Agent",
+  },
+  {
+    title:
+      "PhoneHarness: A Mixed-Action Orchestration Harness and Benchmark for Phone Agents across CLI, GUI, and MCP Tools",
+    authors: [
+      { name: "Jason" },
+      { name: "et al." },
+      { name: "Shangpin Peng" },
+      { name: "et al." },
+      { name: "Chengquan Zhang" },
+      { name: "Han Hu" },
+    ],
+    venue: "Arxiv 2026",
+    paper: "https://phoneharness.github.io/assets/paper.pdf",
+    code: "https://github.com/PhoneHarness/phoneharness",
+    media: "https://mp.weixin.qq.com/s/I2ztL6sFiHGxAiCfh_FTqg",
+    category: "Agent",
   },
   {
     title:
@@ -175,6 +197,6 @@ export const publications: Publication[] = [
     venue: "Arxiv 2026",
     paper: "https://arxiv.org/abs/2605.07630",
     code: "https://github.com/tangzhy/PhoneSafety",
-    category: "agent",
+    category: "Agent",
   },
 ];

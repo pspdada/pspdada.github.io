@@ -1,0 +1,59 @@
+---
+const icons =
+  "py,c,java,bash,pytorch,git,github,vscode,latex,md,arduino,flutter";
+const primarySrc = `https://skillicons.dev/icons?i=${icons}`;
+const fallbackSrc = `https://go-skill-icons.vercel.app/api/icons?i=${icons}`;
+const fallbackHref = "https://go-skill-icons.netlify.app";
+
+// skillicons.dev 单个图标 48x48，每行最多 15 个，间距 12px
+// 当前 12 个图标，按一行计算：宽 = 48*12 + 12*11 = 708，高 = 48
+const iconCount = icons.split(",").length;
+const perRow = Math.min(iconCount, 15);
+const rows = Math.ceil(iconCount / 15);
+const width = perRow * 48 + (perRow - 1) * 12;
+const height = rows * 48 + (rows - 1) * 12;
+---
+
+<p>
+  <a href="https://skillicons.dev" data-skill-link>
+    <img
+      src={primarySrc}
+      alt="Skill Icons"
+      width={width}
+      height={height}
+      loading="eager"
+      decoding="async"
+      class="skill-icons-img"
+      data-skill-img
+      data-fallback-src={fallbackSrc}
+      data-fallback-href={fallbackHref}
+    />
+  </a>
+</p>
+
+<style define:vars={{ width: `${width}`, height: `${height}` }}>
+  .skill-icons-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: var(--width) / var(--height);
+  }
+</style>
+
+<script is:inline>
+  document.querySelectorAll("img[data-skill-img]").forEach((img) => {
+    img.addEventListener(
+      "error",
+      () => {
+        if (img.dataset.fallbackApplied) return;
+        img.dataset.fallbackApplied = "1";
+
+        img.src = img.dataset.fallbackSrc;
+
+        const link = img.closest("a[data-skill-link]");
+        if (link) link.href = img.dataset.fallbackHref;
+      },
+      { once: true }
+    );
+  });
+</script>

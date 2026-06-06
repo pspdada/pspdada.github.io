@@ -1,0 +1,57 @@
+---
+const badges = [
+  {
+    href: "https://github.com/pspdada",
+    src: "https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white",
+    alt: "Github",
+  },
+  {
+    href: "https://scholar.google.com/citations?user=mKnBrRAAAAAJ",
+    src: "https://img.shields.io/badge/Google_Scholar-4285F4?style=flat&logo=google-scholar&logoColor=white",
+    alt: "Google Scholar",
+  },
+  {
+    href: "https://orcid.org/0009-0000-5949-0524",
+    src: "https://img.shields.io/badge/ORCID-A6CE39?style=flat&logo=orcid&logoColor=white",
+    alt: "ORCID",
+  },
+  {
+    href: "https://openreview.net/profile?id=%7EShangpin_Peng1",
+    src: "https://img.shields.io/badge/OpenReview-8C1B13?style=flat&logo=openreview&logoColor=white",
+    alt: "OpenReview",
+  },
+  {
+    href: "https://www.xiaohongshu.com/user/profile/62c6ff3f00000000020025a7",
+    src: "https://img.shields.io/badge/RedNote-FF2442?style=flat&logo=xiaohongshu&logoColor=white",
+    alt: "RedNote",
+  },
+  {
+    href: "https://huggingface.co/psp-dada",
+    src: "https://img.shields.io/badge/Hugging_Face-FCD12A?style=flat&logo=huggingface&logoColor=FCD12A&labelColor=black",
+    alt: "Hugging Face",
+  },
+];
+---
+
+<div class="social-badges">
+  {
+    badges.map((b) => (
+      <a href={b.href}>
+        <img src={b.src} alt={b.alt} />
+      </a>
+    ))
+  }
+</div>
+
+<style>
+  .social-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+  }
+  .social-badges img {
+    display: inline;
+    margin: 0;
+  }
+</style>

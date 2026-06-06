@@ -4,8 +4,11 @@ description: psp_dada 的个人信息主页
 ---
 
 import { Card, CardGrid } from "@astrojs/starlight/components";
+import SkillIcons from "../../../components/SkillIcons.astro";
+import SocialBadges from "../../../components/SocialBadges.astro";
+import TypingSVG from "../../../components/TypingSVG.astro";
 
-### ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Hi+there+%F0%9F%91%8B+I'm+psp_dada!)
+### <TypingSVG />
 
 ### 📌 自我介绍
 
@@ -17,18 +20,13 @@ import { Card, CardGrid } from "@astrojs/starlight/components";
 - 期待在创新项目中携手合作
 - 邮箱：pspdada0808@gmail.com
 
-[Github](https://github.com/pspdada) / [Google Scholar](https://scholar.google.com/citations?user=mKnBrRAAAAAJ) / [ORCID](https://orcid.org/0009-0000-5949-0524) / [OpenReview](https://openreview.net/profile?id=%7EShangpin_Peng1) / [RedNote](https://www.xiaohongshu.com/user/profile/62c6ff3f00000000020025a7) / [Hugging Face](https://huggingface.co/psp-dada) 🤗
+<SocialBadges />
 
 ### 📊 技能
 
 - **编程与工具：**
-  {/* <!-- Generated from: https://git.io/typing-svg --> */}
 
-  <p>
-    <a href="https://skillicons.dev">
-      <img src="https://skillicons.dev/icons?i=py,c,java,bash,pytorch,git,github,vscode,latex,md,arduino,flutter" />
-    </a>
-  </p>
+  <SkillIcons />
 
 - **语言：** 中文（母语）、英文
 - **兴趣爱好：** 羽毛球、游泳
@@ -37,7 +35,7 @@ import { Card, CardGrid } from "@astrojs/starlight/components";
 
 <CardGrid stagger>
   <Card title="博客" icon="open-book">
-    这里是我的一些随笔，记录学习历程与思考。
+    我的随笔，记录学习历程与思考。
     <div style={{ textAlign: "center", marginTop: "0.5em" }}>
       <a
         href="/blog"
@@ -56,7 +54,7 @@ import { Card, CardGrid } from "@astrojs/starlight/components";
     </div>
   </Card>
   <Card title="项目" icon="rocket">
-    展示我完成的项目，每一个都见证了我的成长与能力。
+    我完成的项目，见证我的成长与能力。
     <div style={{ textAlign: "center", marginTop: "0.5em" }}>
       <a
         href="/project"
@@ -75,7 +73,7 @@ import { Card, CardGrid } from "@astrojs/starlight/components";
     </div>
   </Card>
   <Card title="科研" icon="starlight">
-    我的科研工作，体现了我对世界的探索与好奇。
+    我的科研工作，体现我对世界的好奇与探索。
     <div style={{ textAlign: "center", marginTop: "0.5em" }}>
       <a
         href="/research"

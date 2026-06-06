@@ -7,19 +7,21 @@ interface Props {
   venue?: string;
   paper?: string;
   code?: string;
+  media?: string;
   href?: string;
   // 站内详情页路径前缀（用于不同语言版本区分），默认空
   hrefPrefix?: string;
 }
 
-const { title, authors, venue, paper, code, href, hrefPrefix = "" } = Astro.props;
+const { title, authors, venue, paper, code, media, href, hrefPrefix = "" } = Astro.props;
 
-// 第三行 meta：venue / paper / code 自适应组合
+// 第三行 meta：venue / paper / code / media 自适应组合
 type MetaItem = { kind: "venue" | "link"; text: string; href?: string };
 const metaItems: MetaItem[] = [];
 if (venue) metaItems.push({ kind: "venue", text: venue });
 if (paper) metaItems.push({ kind: "link", text: "paper", href: paper });
 if (code) metaItems.push({ kind: "link", text: "code", href: code });
+if (media) metaItems.push({ kind: "link", text: "media", href: media });
 
 const fullHref = href ? `${hrefPrefix}${href}` : undefined;
 ---

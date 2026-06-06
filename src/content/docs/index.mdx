@@ -4,8 +4,11 @@ description: Personal information of psp_dada.
 ---
 
 import { Card, CardGrid } from "@astrojs/starlight/components";
+import SkillIcons from "../../components/SkillIcons.astro";
+import SocialBadges from "../../components/SocialBadges.astro";
+import TypingSVG from "../../components/TypingSVG.astro";
 
-### ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Hi+there+%F0%9F%91%8B+I'm+psp_dada!)
+### <TypingSVG />
 
 ### 📌 Self Intro
 
@@ -17,18 +20,13 @@ Hello everyone, I'm **Shangpin Peng**, nickname **psp_dada**.
 - Always open to innovative collaborations and new opportunities
 - Contact: pspdada0808@gmail.com
 
-[Github](https://github.com/pspdada) / [Google Scholar](https://scholar.google.com/citations?user=mKnBrRAAAAAJ) / [ORCID](https://orcid.org/0009-0000-5949-0524) / [OpenReview](https://openreview.net/profile?id=%7EShangpin_Peng1) / [RedNote](https://www.xiaohongshu.com/user/profile/62c6ff3f00000000020025a7) / [Hugging Face](https://huggingface.co/psp-dada) 🤗
+<SocialBadges />
 
 ### 📊 Skills
 
 - **Programming & Tools:**
-  {/* <!-- Generated from: https://git.io/typing-svg --> */}
 
-  <p>
-    <a href="https://skillicons.dev">
-      <img src="https://skillicons.dev/icons?i=py,c,java,bash,pytorch,git,github,vscode,latex,md,arduino,flutter" />
-    </a>
-  </p>
+  <SkillIcons />
 
 - **Languages:** Chinese (Native) & English
 - **Hobbies:** Badminton, Swimming
@@ -37,7 +35,7 @@ Hello everyone, I'm **Shangpin Peng**, nickname **psp_dada**.
 
 <CardGrid stagger>
   <Card title="Blog" icon="open-book">
-    Here are some of my essays, recording my learning journey and reflections.
+    Some of my essays, recording my learning journey and reflections.
     <div style={{ textAlign: "center", marginTop: "0.5em" }}>
       <a
         href="/blog"
@@ -56,7 +54,7 @@ Hello everyone, I'm **Shangpin Peng**, nickname **psp_dada**.
     </div>
   </Card>
   <Card title="Project" icon="rocket">
-    A showcase of projects I've completed—each one marks my growth and
+    A showcase of projects I've completed, marking my growth and
     capabilities.
     <div style={{ textAlign: "center", marginTop: "0.5em" }}>
       <a
@@ -76,7 +74,7 @@ Hello everyone, I'm **Shangpin Peng**, nickname **psp_dada**.
     </div>
   </Card>
   <Card title="Research" icon="starlight">
-    My research work reflects my deeper exploration and curiosity about the
+    My research work, reflecting my deeper exploration and curiosity about the
     world.
     <div style={{ textAlign: "center", marginTop: "0.5em" }}>
       <a
