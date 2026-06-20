@@ -152,23 +152,8 @@ export const publications: Publication[] = [
   },
   // ===== Agent =====
   {
-    title: "PhoneWorld: Scaling Phone-Use Agent Environments",
-    authors: [
-      { name: "Zhengyang Tang" },
-      { name: "et al." },
-      { name: "Shangpin Peng" }, // 不加粗
-      { name: "et al." },
-      { name: "Chengquan Zhang" },
-      { name: "Han Hu" },
-    ],
-    venue: "Arxiv 2026",
-    paper: "https://arxiv.org/abs/2605.29486",
-    media: "https://mp.weixin.qq.com/s/uzasS6q6LAwX8wLXD7KzeA",
-    category: "Agent",
-  },
-  {
     title:
-      "PhoneHarness: A Mixed-Action Orchestration Harness and Benchmark for Phone Agents across CLI, GUI, and MCP Tools",
+      "PhoneHarness: Harnessing Phone-Use Agents through Mixed GUI, CLI, and Tool Actions",
     authors: [
       { name: "Jason" },
       { name: "et al." },
@@ -178,18 +163,34 @@ export const publications: Publication[] = [
       { name: "Han Hu" },
     ],
     venue: "Arxiv 2026",
-    paper: "https://phoneharness.github.io/assets/paper.pdf",
+    paper: "https://arxiv.org/abs/2606.14832",
     code: "https://github.com/PhoneHarness/phoneharness",
     media: "https://mp.weixin.qq.com/s/I2ztL6sFiHGxAiCfh_FTqg",
     category: "Agent",
   },
+  {
+    title: "PhoneWorld: Scaling Phone-Use Agent Environments",
+    authors: [
+      { name: "Zhengyang Tang" },
+      { name: "et al." },
+      { name: "Shangpin Peng" },
+      { name: "et al." },
+      { name: "Chengquan Zhang" },
+      { name: "Han Hu" },
+    ],
+    venue: "Arxiv 2026",
+    paper: "https://arxiv.org/abs/2605.29486",
+    media: "https://mp.weixin.qq.com/s/uzasS6q6LAwX8wLXD7KzeA",
+    category: "Agent",
+  },
+
   {
     title:
       "Safe, or Simply Incapable? Rethinking Safety Evaluation for Phone-Use Agents",
     authors: [
       { name: "Zhengyang Tang" },
       { name: "et al." },
-      { name: "Shangpin Peng" }, // 不加粗
+      { name: "Shangpin Peng" },
       { name: "et al." },
       { name: "Chengquan Zhang" },
       { name: "Han Hu" },
