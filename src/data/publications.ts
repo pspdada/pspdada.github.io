@@ -6,6 +6,7 @@
 // - authors: 作者列表，highlight=true 表示加粗高亮（标记作者本人）
 // - venue: 发表信息（如 ICCV 2025、Arxiv 2026、Core Contributor 等），会与 paper/code 同行展示
 // - paper: 论文外部链接（可选）
+// - project: 项目主页外部链接（可选）
 // - code: 代码仓库外部链接（可选）
 // - href: 站内详情页链接（可选）。若提供则 title 可点击跳转详情页
 // - media: 媒体报道/公众号讲解链接（可选）
@@ -21,6 +22,7 @@ export interface Publication {
   authors: Author[];
   venue?: string;
   paper?: string;
+  project?: string;
   code?: string;
   media?: string;
   href?: string;
@@ -152,6 +154,22 @@ export const publications: Publication[] = [
   },
   // ===== Agent =====
   {
+    title: "PhoneBuddy: Training Open Models for Agentic Phone Use",
+    authors: [
+      { name: "Zhengyang Tang" },
+      { name: "et al." },
+      { name: "Shangpin Peng" },
+      { name: "et al." },
+      { name: "Chengquan Zhang" },
+      { name: "Han Hu" },
+    ],
+    venue: "Arxiv 2026",
+    paper: "https://arxiv.org/abs/2606.23049",
+    project: "https://phonebuddyai.github.io/",
+    code: "https://github.com/PhoneBuddyAI/phonebuddy",
+    category: "Agent",
+  },
+  {
     title:
       "PhoneHarness: Harnessing Phone-Use Agents through Mixed GUI, CLI, and Tool Actions",
     authors: [
@@ -164,6 +182,7 @@ export const publications: Publication[] = [
     ],
     venue: "Arxiv 2026",
     paper: "https://arxiv.org/abs/2606.14832",
+    project: "https://phoneharness.github.io/",
     code: "https://github.com/PhoneHarness/phoneharness",
     media: "https://mp.weixin.qq.com/s/I2ztL6sFiHGxAiCfh_FTqg",
     category: "Agent",

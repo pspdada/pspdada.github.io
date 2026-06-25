@@ -6,6 +6,7 @@ interface Props {
   authors: Author[];
   venue?: string;
   paper?: string;
+  project?: string;
   code?: string;
   media?: string;
   href?: string;
@@ -13,13 +14,14 @@ interface Props {
   hrefPrefix?: string;
 }
 
-const { title, authors, venue, paper, code, media, href, hrefPrefix = "" } = Astro.props;
+const { title, authors, venue, paper, project, code, media, href, hrefPrefix = "" } = Astro.props;
 
 // 第三行 meta：venue / paper / code / media 自适应组合
 type MetaItem = { kind: "venue" | "link"; text: string; href?: string };
 const metaItems: MetaItem[] = [];
 if (venue) metaItems.push({ kind: "venue", text: venue });
 if (paper) metaItems.push({ kind: "link", text: "paper", href: paper });
+if (project) metaItems.push({ kind: "link", text: "project", href: project });
 if (code) metaItems.push({ kind: "link", text: "code", href: code });
 if (media) metaItems.push({ kind: "link", text: "media", href: media });
 
