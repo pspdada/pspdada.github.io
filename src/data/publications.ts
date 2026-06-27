@@ -167,6 +167,7 @@ export const publications: Publication[] = [
     paper: "https://arxiv.org/abs/2606.23049",
     project: "https://phonebuddyai.github.io/",
     code: "https://github.com/PhoneBuddyAI/phonebuddy",
+    media: "https://mp.weixin.qq.com/s/ej8uAGXb9mmDirwVDSsI8g",
     category: "Agent",
   },
   {
