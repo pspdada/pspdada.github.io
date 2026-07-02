@@ -104,6 +104,19 @@ export const publications: Publication[] = [
     category: "VLM",
   },
   {
+    title: "StrucTab: A Structured Optimization Framework for Table Parsing",
+    authors: [
+      { name: "Gengluo Li*" },
+      { name: "Shangpin Peng*", highlight: true },
+      { name: "et al." },
+      { name: "Yu Zhou" },
+    ],
+    venue: "ECCV 2026",
+    paper: "https://arxiv.org/abs/2606.29905",
+    code: "https://github.com/VirtualLUOUCAS/StrucTab",
+    category: "VLM",
+  },
+  {
     title:
       "Mitigating Object Hallucinations via Sentence-Level Early Intervention",
     authors: [
