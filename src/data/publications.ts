@@ -98,6 +98,7 @@ export const publications: Publication[] = [
     venue: "Arxiv 2026, Co-first Author",
     paper: "https://arxiv.org/abs/2607.04884",
     code: "https://github.com/Tencent-Hunyuan/HunyuanOCR",
+    media: "https://mp.weixin.qq.com/s/vKFCa9FfoGBUGK8J1MhFag",
     category: "VLM",
   },
   {
@@ -180,6 +181,21 @@ export const publications: Publication[] = [
     category: "VLM",
   },
   // ===== Agent =====
+  {
+    title:
+      "HyMobileAgent: Data-Environment Co-Scaling for Efficient GUI Agents",
+    authors: [
+      { name: "Hy Vision Team" },
+      { name: "Huawen Shen" },
+      { name: "Zhengyang Tang" },
+      { name: "Shangpin Peng", highlight: true },
+      { name: "et al." },
+      { name: "Chengquan Zhang" },
+    ],
+    venue: "Core Contributor of Technical Report",
+    paper: "https://arxiv.org/abs/2607.14548",
+    category: "Agent",
+  },
   {
     title: "PhoneBuddy: Training Open Models for Agentic Phone Use",
     authors: [
