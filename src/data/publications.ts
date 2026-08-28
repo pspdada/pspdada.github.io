@@ -55,6 +55,19 @@ export const publications: Publication[] = [
   // ===== Reinforcement Learning =====
   {
     title:
+      "Beyond Correctness: Benchmarking and Aligning Response Behaviors in Hybrid-Thinking MLLMs",
+    authors: [
+      { name: "Xinming Wang" },
+      { name: "Weinong Wang" },
+      { name: "et al." },
+      { name: "Shangpin Peng" },
+    ],
+    venue: "Arxiv 2026",
+    paper: "https://arxiv.org/pdf/2608.12781",
+    category: "RL",
+  },
+  {
+    title:
       "Uni-OPD: Unifying On-Policy Distillation with a Dual-Perspective Recipe",
     authors: [
       { name: "Wenjin Hou*" },
