@@ -61,6 +61,8 @@ export const publications: Publication[] = [
       { name: "Weinong Wang" },
       { name: "et al." },
       { name: "Shangpin Peng" },
+      { name: "et al." },
+      { name: "Xu-Yao Zhang" },
     ],
     venue: "Arxiv 2026",
     paper: "https://arxiv.org/pdf/2608.12781",
@@ -230,7 +232,7 @@ export const publications: Publication[] = [
     title:
       "PhoneHarness: Harnessing Phone-Use Agents through Mixed GUI, CLI, and Tool Actions",
     authors: [
-      { name: "Jason" },
+      { name: "Chenxin Li" },
       { name: "et al." },
       { name: "Shangpin Peng" },
       { name: "et al." },
@@ -247,12 +249,11 @@ export const publications: Publication[] = [
   {
     title: "PhoneWorld: Scaling Phone-Use Agent Environments",
     authors: [
-      { name: "Zhengyang Tang" },
+      { name: "Yuxuan Liu" },
       { name: "et al." },
       { name: "Shangpin Peng" },
       { name: "et al." },
-      { name: "Chengquan Zhang" },
-      { name: "Han Hu" },
+      { name: "Zhengyang Tang" },
     ],
     venue: "Arxiv 2026",
     paper: "https://arxiv.org/abs/2605.29486",
